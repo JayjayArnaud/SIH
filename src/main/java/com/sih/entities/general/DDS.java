@@ -1,4 +1,4 @@
-package com.sih.entities;
+package com.sih.entities.general;
 
 import java.io.Serializable;
 
@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@SuppressWarnings("serial")
 @Entity
 public class DDS implements Serializable{
 @Id
