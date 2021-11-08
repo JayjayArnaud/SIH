@@ -2,6 +2,7 @@ package com.sih.entities.general;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +14,9 @@ public class DDS implements Serializable{
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
 private Long iddds;
+@Column(unique = true, nullable = false, length = 10)
 private String codDds;
+@Column(unique = true, nullable = false)
 private String libDds;
 	
 	public DDS() {
@@ -48,6 +51,10 @@ private String libDds;
 
 	public void setLibDds(String libDds) {
 		this.libDds = libDds;
+	}
+	
+	public String element() {
+		return "DDS(" + iddds + "; " + codDds + "; " + libDds + ")";
 	}
 
 	@Override

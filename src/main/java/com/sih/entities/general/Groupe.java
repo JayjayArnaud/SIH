@@ -1,5 +1,6 @@
 package com.sih.entities.general;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,7 +13,9 @@ public class Groupe {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long idGpe;
+	@Column(unique = true, nullable = false, length = 10)
 	private String codGpe;
+	@Column(unique = true, nullable = false)
 	private String libGpe;
 	private String DescGpe; //Descrription du groupe
 	
@@ -62,6 +65,10 @@ public class Groupe {
 	@Override
 	public String toString() {
 		return "Groupe [idGpe=" + idGpe + ", codGpe=" + codGpe + ", libGpe=" + libGpe + ", DescGpe=" + DescGpe + "]";
+	}
+	
+	public String element() {
+		return idGpe + "; " + codGpe + "; " + libGpe + "; " + DescGpe;
 	}
 
 }

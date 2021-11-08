@@ -81,4 +81,9 @@ public class UserGroup implements Serializable {
 				+ "]";
 	}
 
+	public String element() {
+		return  idUsGpe + ";" + deb + ";" + fin + ";" + user.getIdUser() +" "+user.getLogin()+ ";" + group.getIdGpe()+
+				" "+group.getLibGpe();
+	}
+
 }

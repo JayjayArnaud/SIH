@@ -16,8 +16,9 @@ public class Objet implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long idObj;
-	@Column(nullable = true)
+	@Column(unique = true, nullable = false, length = 10)
 	private String codObj;
+	@Column(unique = true, nullable = false)
 	private String libObj;
 	private String descObj;
 	
@@ -67,6 +68,10 @@ public class Objet implements Serializable {
 	@Override
 	public String toString() {
 		return "Objet [idObj=" + idObj + ", codObj=" + codObj + ", libObj=" + libObj + ", descObj=" + descObj + "]";
+	}
+
+	public String element() {
+		return idObj + "; " + codObj + "; " + libObj + "; " + descObj ;
 	}
 
 }
