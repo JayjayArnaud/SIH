@@ -19,7 +19,7 @@ public class DisposerService {
 	private final ObjetRepo objr;
 	
 	public DisposerService(DisposerRepo repo, AgirRepo aux, ObjetRepo objr) {
-		super();
+		//super();
 		this.repo = repo;
 		this.aux = aux;
 		this.objr = objr;

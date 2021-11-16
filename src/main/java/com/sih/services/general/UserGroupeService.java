@@ -3,13 +3,15 @@ package com.sih.services.general;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.sih.entities.general.Agir;
 import com.sih.entities.general.UserGroup;
 import com.sih.entities.general.Utilisateur;
 import com.sih.repositories.general.AgirRepo;
 import com.sih.repositories.general.ObjetRepo;
 import com.sih.repositories.general.UserGroupRepo;
-
+@Service
 public class UserGroupeService {
 	private final UserGroupRepo repo;
 	private final AgirRepo aux;

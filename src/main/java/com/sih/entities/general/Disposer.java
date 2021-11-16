@@ -31,7 +31,7 @@ public class Disposer {
 	private Objet obj;
 
 	public Disposer() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public Disposer(Date deb, Date fin, Groupe grpe, Droit drt, Objet obj) {

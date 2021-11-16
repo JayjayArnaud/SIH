@@ -9,7 +9,6 @@ import com.sih.entities.general.Agir;
 import com.sih.entities.general.Utilisateur;
 import com.sih.repositories.general.AgirRepo;
 import com.sih.repositories.general.ObjetRepo;
-import com.sih.repositories.general.UtilisateurRepo;
 
 @Service
 public class AgirService {
